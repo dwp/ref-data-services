@@ -1,0 +1,116 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+<!-- LEFT SIDE COLUMN ------------------------------------------->
+<div class="govuk-grid-column-one-quarter">
+  
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="search-datasets">
+Search datasets
+</label>
+
+<div id="search-hint" class="govuk-hint">
+Search by file name (e.g., sales_data.csv)
+</div>
+
+<div class="govuk-input__wrapper">
+<input
+class="govuk-input"
+id="search-datasets"
+name="search-datasets"
+type="text"
+aria-describedby="search-hint">
+
+<button
+class="govuk-button"
+data-module="govuk-button"
+type="submit"
+style="margin-left: 5px;">
+Search
+</button>
+</div>
+</div>
+
+</div>
+
+
+
+<!-- MAIN CONTENT COLUMN ----------------------------------------->
+<div class="govuk-grid-column-three-quarters">
+
+  <p class="govuk-body"><a href="all-dataset" class="govuk-back-link">Back</a></p>
+
+<h1 class="govuk-heading-l">List of all available datasets</h1>
+
+<ul class="govuk-list">
+<li><a href="#">Enterprise Source Identity Confidence</a></li>
+<li>  <a href="#"> Enterprise Source Types </a></li>
+<li><a href="#">Enterprise DWP_KCIS_Trigger Type</a></li>
+<li><a href="#">Enterprise Lower Earnings Limit</a></li>
+<li><a href="#"> Enterprise  Address type</a></li>
+<li><a href="#">Enterprise Address Status Type</a></li>
+<li><a href="#">Enterprise DWP_Health and Disability_PIP Rates</a></li>
+<li>  <a href="#"> Enterprise DWP_SPA_System Codes_Rule Zone </a></li>
+<li><a href="#">Enterprise DWP_Provenance_Channel</a></li>
+<li><a href="#">Enterprise DWP_Health and Disability_AA Rates</a></li>
+<li><a href="#">Enterprise DWP_Bank Holidays</a></li>
+</ul>
+
+<!-- PAGINATION ------------------------------------------------->
+
+<nav class="govuk-pagination" aria-label="Pagination">
+
+
+ <div class="govuk-pagination__prev">
+    <a class="govuk-link govuk-pagination__link" href="all-dataset" rel="prev">
+      <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+      </svg>
+      <span class="govuk-pagination__link-title">
+        Previous<span class="govuk-visually-hidden"> page</span>
+      </span>
+    </a>
+  </div>
+  
+  <ul class="govuk-pagination__list">
+  <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="all-dataset" aria-label="Page 2">
+       1
+      </a>
+    </li>
+
+       <li class="govuk-pagination__item govuk-pagination__item--current">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+        2
+      </a>
+    </li>
+     <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="all-dataset-next" aria-label="Page 2">
+      3
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-pagination__next">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+      <span class="govuk-pagination__link-title">
+        Next<span class="govuk-visually-hidden"> page</span>
+      </span>
+      <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+
+<p class="moj-pagination__results">Page 1 of 5</p>
+</div>
+
+{% endblock %}
+
+
+

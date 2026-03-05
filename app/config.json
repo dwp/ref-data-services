@@ -1,8 +1,8 @@
 {
-  "serviceName": "Service name goes here",
+  "serviceName": "RDS",
   "plugins": {
     "govuk-frontend": {
-      "rebrand": true
+      "rebrand": false
     }
   }
 }

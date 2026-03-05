@@ -1,19 +1,26 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% set pageName="RDS" %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
     <h1 class="govuk-heading-xl">
-      {{ serviceName }}
+     Reference data service
     </h1>
-test
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+    
+    <p>Get a quick preview of how this experience will work. Explore the key screens and interactions designed for this prototype.</p>
+
+    <ul class="govuk-list"> 
+
+    <li>
+      <a class="govuk-link" href="/v1/start-now">Continue to the next step.</a> 
+      </li>
+      </ul>
+
+
   </div>
 </div>
 
