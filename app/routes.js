@@ -42,6 +42,5 @@ router.post('/v1/sign-in-options', function (req, res)
 
 // Landing page (add this)
 router.get('/v1/landing-page', function (req, res) {
-res.render('v1/landing-page.html')
-});
+res.render('v1/landing-page');});``
 
