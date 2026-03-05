@@ -18,7 +18,9 @@ router.all('/v1*', function (req, res, next) {
 
 // Start page
 
-router.get('/v1', function (req, res) {  res.render('v1/index');});
+router.get('/v1/', function (req, res) {  res.render('v1/index');
+
+});
 
 
 // Next page
@@ -37,3 +39,9 @@ router.post('/v1/sign-in-options', function (req, res)
         return res.redirect('/v1/sign-in-sso');  
     }
 });
+
+// Landing page (add this)
+router.get('/v1/landing-page', function (req, res) {
+res.render('/v1/landing-page')
+})
+
