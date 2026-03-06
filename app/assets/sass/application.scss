@@ -6,3 +6,15 @@
 // Add extra styles here
 
 .action-bar {  display: flex;  align-items: center;  gap: 16px; /* space between button + select */}
+
+/* Add spacing between DWP header tabs */
+.dwp-header-navigation__item {
+margin-right: 1rem; /* spacing between tabs */
+}
+
+/* Optional: make each tab wider */
+.dwp-header-navigation__item a {
+padding: 0 0.75rem; /* left + right padding */
+}
+
+
