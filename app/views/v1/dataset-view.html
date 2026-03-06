@@ -139,23 +139,19 @@ Apply filters
 <div class="action-bar govuk-!-margin-bottom-7">
 
 <div class="govuk-form-group govuk-!-margin-bottom-0">
-<select class="govuk-select" id="sort
 
-<select class="govuk-select" id="sort" name="sort">
+ <div class="action-bar govuk-!-margin-bottom-7">
+      <div class="govuk-form-group govuk-!-margin-bottom-0">
+        <select class="govuk-select" id="export-action" name="export-action">
+          <option value="export" selected>Export CSV file</option>
+          <option value="upload">Upload CSV file</option>
+        </select>
+      </div>
+    </div>
 
-<option value="updated" selected>Export CSV file</option>
-<option value="views">Upload CSV file</option>
-
-</select>
-</div>
-
-
-</div>
-
-
-    
 
 <!-- TABLE -->
+ 
 <table class="govuk-table">
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
@@ -164,6 +160,7 @@ Apply filters
 <th class="govuk-table__header">Alias</th>
 <th class="govuk-table__header">DWP Location</th>
 <th class="govuk-table__header">Office Type</th>
+
 </tr>
 
 </thead>
