@@ -70,6 +70,7 @@ aria-describedby="search-hint">
 <h3 class="govuk-heading-s">Filters</h3>
 <p class="govuk-body">Select one or more of the filters from the list and apply.</p>
 
+
 <!-- STATUS -->
 <h4 class="govuk-heading-s">Status</h4>
 
@@ -136,181 +137,119 @@ Apply filters
 
 <!-- EXPORT BUTTON -->
 
-<div class="action-bar govuk-!-margin-bottom-7">
+<div class="action-bar govuk-!-margin-bottom-0">
 
 <div class="govuk-form-group govuk-!-margin-bottom-0">
 
-  <button class="govuk-button govuk-button--secondary govuk-!-margin-top-1">
-Download CSV file </button>
-
-<button class="govuk-button govuk-button--secondary govuk-!-margin-top-1 govuk-!-margin-left-4">
-  Upload CSV file
+<button class="govuk-button govuk-button--secondary govuk-!-margin-top-0">
+Download CSV file
 </button>
 
+<button class="govuk-button govuk-button--secondary govuk-!-margin-top-0 govuk-!-margin-left-4">
+Upload CSV file
+</button>
+
+</div>
+
+</div> <!-- THIS CLOSING DIV FIXES THE WHITE SPACE -->
 
 
-<!-- TABLE -->
- 
-<table class="govuk-table">
-<thead class="govuk-table__head">
-<tr class="govuk-table__row">
-<th class="govuk-table__header">Name</th>
-<th class="govuk-table__header">Code</th>
-<th class="govuk-table__header">Alias</th>
-<th class="govuk-table__header">DWP Location</th>
-<th class="govuk-table__header">Office Type</th>
-<th class="govuk-table__header">Example 1</th>
-<th class="govuk-table__header">Example 2</th>
+<!-- SCROLLABLE TABLE (MOJ pattern) -->
 
-</tr>
+<div class="moj-scrollable-pane"
+role="region"
+aria-label="Office locations table"
+tabindex="0"
+style="overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; box-sizing: border-box;">
 
-</thead>
+  <!-- ADD min-width HERE -->
+  <table class="govuk-table" style="min-width: 1400px;">
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">26.4 Reach Youth Hub</td>
-<td class="govuk-table__cell">111553</td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell">No</td>
-<td class="govuk-table__cell">Youth Hub</td>
-<td class="govuk-table__cell">Example</td>
-<td class="govuk-table__cell">Example</td>
-</tr>
+      <!-- your table content... -->
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">AFC Wimbledon Youth...</td>
-<td class="govuk-table__cell">112153</td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell">No</td>
-<td class="govuk-table__cell">Youth Hub</td>
-<td class="govuk-table__cell">Example</td>
-<td class="govuk-table__cell">Example</td>
-</tr>
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">ASNUQ (BT)</td>
-<td class="govuk-table__cell">110113</td>
-<td class="govuk-table__cell">ASNUQ (BT)</td>
-<td class="govuk-table__cell">No</td>
-<td class="govuk-table__cell">Youth Hub</td>
-<td class="govuk-table__cell">Example</td>
-<td class="govuk-table__cell">Example</td>
-</tr>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header">Name</th>
+        <th class="govuk-table__header">Code</th>
+        <th class="govuk-table__header">Alias</th>
+        <th class="govuk-table__header">DWP Location</th>
+        <th class="govuk-table__header">Office Type</th>
+        <th class="govuk-table__header">CWID</th>
+        <th class="govuk-table__header">LMS Mnemonic</th>
+      </tr>
+    </thead>
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">26.4 Reach Youth Hub</td>
-<td class="govuk-table__cell">111553</td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell">No</td>
-<td class="govuk-table__cell">Youth Hub</td>
-<td class="govuk-table__cell">Example</td>
-<td class="govuk-table__cell">Example</td>
-</tr>
+    <tbody class="govuk-table__body">
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">AFC Wimbledon Youth...</td>
-<td class="govuk-table__cell">112153</td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell">No</td>
-<td class="govuk-table__cell">Youth Hub</td>
-<td class="govuk-table__cell">Example</td>
-<td class="govuk-table__cell">Example</td>
-</tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">26.4 Reach Youth Hub</td>
+        <td class="govuk-table__cell">111553</td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell">No</td>
+        <td class="govuk-table__cell">Youth Hub</td>
+        <td class="govuk-table__cell">N/A</td>
+        <td class="govuk-table__cell"></td>
+      </tr>
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">ASNUQ (BT)</td>
-<td class="govuk-table__cell">110113</td>
-<td class="govuk-table__cell">ASNUQ (BT)</td>
-<td class="govuk-table__cell">No</td>
-<td class="govuk-table__cell">Youth Hub</td>
-<td class="govuk-table__cell">Example</td>
-<td class="govuk-table__cell">Example</td>
-</tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">AFC Wimbledon Youth...</td>
+        <td class="govuk-table__cell">112153</td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell">No</td>
+        <td class="govuk-table__cell">Youth Hub</td>
+        <td class="govuk-table__cell">N/A</td>
+        <td class="govuk-table__cell">ACD</td>
+      </tr>
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">26.4 Reach Youth Hub</td>
-<td class="govuk-table__cell">111553</td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell">No</td>
-<td class="govuk-table__cell">Youth Hub</td>
-<td class="govuk-table__cell">Example</td>
-<td class="govuk-table__cell">Example</td>
-</tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">ASNUQ (BT)</td>
+        <td class="govuk-table__cell">110113</td>
+        <td class="govuk-table__cell">ASNUQ (BT)</td>
+        <td class="govuk-table__cell">No</td>
+        <td class="govuk-table__cell">Youth Hub</td>
+        <td class="govuk-table__cell">N/A</td>
+        <td class="govuk-table__cell"></td>
+      </tr>
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">AFC Wimbledon Youth...</td>
-<td class="govuk-table__cell">112153</td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell">No</td>
-<td class="govuk-table__cell">Youth Hub</td>
-<td class="govuk-table__cell">Example</td>
-<td class="govuk-table__cell">Example</td>
-</tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">26.4 Reach Youth Hub</td>
+        <td class="govuk-table__cell">111553</td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell">No</td>
+        <td class="govuk-table__cell">Youth Hub</td>
+        <td class="govuk-table__cell">N/A</td>
+        <td class="govuk-table__cell"></td>
+      </tr>
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">ASNUQ (BT)</td>
-<td class="govuk-table__cell">110113</td>
-<td class="govuk-table__cell">ASNUQ (BT)</td>
-<td class="govuk-table__cell">No</td>
-<td class="govuk-table__cell">Youth Hub</td>
-<td class="govuk-table__cell">Example</td>
-<td class="govuk-table__cell">Example</td>
-</tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">ASNUQ (BT)110113</td>
+        <td class="govuk-table__cell">110113</td>
+        <td class="govuk-table__cell">ASNUQ (BT)</td>
+        <td class="govuk-table__cell">No</td>
+        <td class="govuk-table__cell">Youth Hub</td>
+        <td class="govuk-table__cell">N/A</td>
+        <td class="govuk-table__cell">ABE</td>
+      </tr>
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">26.4 Reach Youth Hub</td>
-<td class="govuk-table__cell">111553</td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell">No</td>
-<td class="govuk-table__cell">Youth Hub</td>
-<td class="govuk-table__cell">Example</td>
-<td class="govuk-table__cell">Example</td>
-</tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">ASNUQ (BT)110113</td>
+        <td class="govuk-table__cell">110113</td>
+        <td class="govuk-table__cell">ASNUQ (BT)</td>
+        <td class="govuk-table__cell">No</td>
+        <td class="govuk-table__cell">Youth Hub</td>
+        <td class="govuk-table__cell">N/A</td>
+        <td class="govuk-table__cell"></td>
+      </tr>
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">AFC Wimbledon Youth...</td>
-<td class="govuk-table__cell">112153</td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell">No</td>
-<td class="govuk-table__cell">Youth Hub</td>
-<td class="govuk-table__cell">Example</td>
-<td class="govuk-table__cell">Example</td>
-</tr>
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">ASNUQ (BT)110113</td>
-<td class="govuk-table__cell">110113</td>
-<td class="govuk-table__cell">ASNUQ (BT)</td>
-<td class="govuk-table__cell">No</td>
-<td class="govuk-table__cell">Youth Hub</td>
-<td class="govuk-table__cell">Example</td>
-<td class="govuk-table__cell">Example</td>
-</tr>
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">26.4 Reach Youth Hub</td>
-<td class="govuk-table__cell">111553</td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell">No</td>
-<td class="govuk-table__cell">Youth Hub</td>
-<td class="govuk-table__cell">Example</td>
-<td class="govuk-table__cell">Example</td>
-</tr>
 
-</tbody>
-</table>
+    </tbody>
+  </table>
+
+</div>
+
 
 <!-- PAGINATION -->
 

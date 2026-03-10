@@ -18,6 +18,23 @@ padding: 0 0.75rem; /* left + right padding */
 }
 
 
+.moj-scrollable-pane {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+}
+
+.moj-scrollable-pane:focus {
+  outline: 3px solid #fd0;
+  outline-offset: 0;
+}
+
+.moj-scrollable-pane::after {
+  content: "";
+  display: block;
+  height: 10px;
+}
+
 
 
 
