@@ -1,0 +1,128 @@
+{% extends "layouts/main.html" %}
+{% set pageName="RDS" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+<!-- Left sidebar -->
+<div class="govuk-grid-column-one-quarter">
+
+<nav class="govuk-!-margin-bottom-6">
+<h3 class="govuk-heading-s">Popular links</h3>
+
+<ul class="govuk-list">
+<li>  <a href="#">    Enterprise address type  </a></li>
+<li><a href="dataset-view">Office locations</a></li>
+<li><a href="all-dataset">View all datasets</a></li>
+</ul>
+
+</div>
+
+
+<!-- Main content -->
+<div class="govuk-grid-column-three-quarters">
+
+<p class="govuk-body"><a href="sign-in-radio" class="govuk-back-link">Back</a></p>
+
+<h1 class="govuk-heading-l">Find a dataset</h1>
+
+<!-- Search field with hint -->
+<form method="get" action="#" class="search-tight">
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="search-datasets">Search datasets</label>
+<div id="search-hint" class="govuk-hint">
+Search by file name (e.g., sales_data.csv)
+</div>
+
+<div class="govuk-input__wrapper">
+<input class="govuk-input" id="search-datasets" name="query" type="text" aria-describedby="search-hint">
+<button class="govuk-button govuk-button--primary" style="margin-left: 5px;" type="submit">
+Search
+</button>
+</div>
+</div>
+
+</form>
+
+<!-- Accordion: Recently updated + Recently added -->
+<div class="govuk-accordion" data-module="govuk-accordion" id="datasets-accordion">
+    
+
+<!-- Section 1 -->
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button" id="accordion-heading-updated">
+Recently updated dataset
+</span>
+</h2>
+</div>
+<div id="accordion-content-updated" class="govuk-accordion__section-content">
+<p class="govuk-body">These are the datasets that have been updated most recently.</p>
+<ul class="govuk-list">
+<li><a href="#">Enterprise Level of trust</a></li>
+<li><a href="#">Enterprise Nationalities</a></li>
+</ul>
+</div>
+</div>
+
+<!-- Section 2 -->
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button" id="accordion-heading-added">
+Recently added datasets
+</span>
+</h2>
+</div>
+<div id="accordion-content-added" class="govuk-accordion__section-content">
+<p class="govuk-body">These are the datasets that have been added most recently.</p>
+<ul class="govuk-list">
+<li><a href="#">Enterprise countries</a></li>
+<li><a href="#">Enterprise DWP_KCIS_Decision Type</a></li>
+<li><a href="#">Enterprise Format</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<!-- Section 3 -->
+<h2 class="govuk-heading-m">Not sure what you need?</h2>
+<p class="govuk-body">
+If you’re not sure what you are looking for, you can view all available datasets
+<a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">here</a>.
+</p>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<!-- Section 4 -->
+<h2 class="govuk-heading-m">Need help or have a question?</h2>
+<p class="govuk-body">
+If you’re not sure what to do next, you can get help on our Q&amp;A page.
+</p>
+<p class="govuk-body">
+<a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">
+Read the help and Q&amp;A page (opens in new tab)
+</a>
+</p>
+
+</div>
+
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
