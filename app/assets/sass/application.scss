@@ -41,3 +41,16 @@ padding: 0 0.75rem; /* left + right padding */
   /* Increase or decrease as needed */}
 
 
+.dwp-header__service-action {
+  position: absolute;
+  right: 40px;
+  top: 34px;
+  display: block;
+}
+
+.dwp-header__service-action .dwp-header__link {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 19px;
+}
