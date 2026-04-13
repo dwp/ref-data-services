@@ -7,13 +7,15 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
-// Apply RDS only to all /v1 pages
+// ---------------------------
+// V1 ROUTES
+// ---------------------------
+
+// Apply RDS only to v1 pages
 router.all('/v1*', function (req, res, next) {  
     res.locals.serviceName = 'RDS' 
     next()
 })
-
-// Add your routes here
 
 
 // Start page
@@ -21,7 +23,6 @@ router.all('/v1*', function (req, res, next) {
 router.get('/v1/', function (req, res) {  res.render('v1/index');
 
 });
-
 
 // Next page
 router.get('/v1/start-now', function (req, res) {  res.render('v1/start-now');});
@@ -39,5 +40,25 @@ router.post('/v1/sign-in-options', function (req, res)
         return res.redirect('/v1/sign-in-sso');  
     }
 });
+
+// ---------------------------
+// V2 ROUTES
+// ---------------------------
+
+// Apply RDS only to v2 pages
+router.all('/v2/*', function (req, res, next) {
+  res.locals.serviceName = 'RDS'
+  next()
+})
+
+// Start page
+router.get('/v2/', function (req, res) {
+  res.render('v2/index')
+})
+
+// Next page
+router.get('/v2/start-now', function (req, res) {
+  res.render('v2/start-now')
+})
 
 
