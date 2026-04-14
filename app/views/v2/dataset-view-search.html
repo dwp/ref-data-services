@@ -8,22 +8,30 @@
 
 {% block header %}
 
+<div style="position: relative;">
 
   {{ dwpHeader({
-    serviceName: "Reference data services",
-    serviceHref: '#',
-    container: true,
-    navigation: {
-      items: [
-       
-        { href: "#", text: "Summary" },
-        { href: "#", text: "Audit history" },
-        { href: "#", text: "Data dictionary" },
-        { href: "#", text: "Data quality" },
-         { href: "#", text: "Data catalogue" }
-      ]
-    }
+      serviceName: "Reference data services",
+      serviceHref: '#',
+      container: true,
+      navigation: {
+        items: [
+          { href: "#", text: "Summary" },
+          { href: "#", text: "Audit history" },
+          { href: "#", text: "Data dictionary" },
+          { href: "#", text: "Data quality" },
+          { href: "#", text: "Data catalogue" }
+        ]
+      }
   }) }}
+
+  <!-- Sign-out -->
+  <div class="dwp-header__service-action">
+    <a href="/sign-out" class="dwp-header__link">Sign out</a>
+  </div>
+
+</div>
+
 {% endblock %}
 
 {# 3 Optional: before-content area (breadcrumbs, phase banner, etc.) #}

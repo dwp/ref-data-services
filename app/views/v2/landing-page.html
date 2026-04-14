@@ -1,7 +1,33 @@
 {% extends "layouts/main.html" %}
 {% set pageName="RDS" %}
 
+
+{% block header %}
+
+<div style="position: relative;">
+
+  {{ dwpHeader({
+      serviceName: "Reference data services",
+      serviceHref: '#',
+      container: true,
+      navigation: {
+     
+      }
+  }) }}
+
+  <!-- Sign-out -->
+  <div class="dwp-header__service-action">
+    <a href="/sign-out" class="dwp-header__link">Sign out</a>
+  </div>
+
+</div>
+
+{% endblock %}
+
+
+
 {% block content %}
+
 
 <div class="govuk-grid-row">
 
@@ -114,15 +140,3 @@ Read the help and Q&amp;A page (opens in new tab)
 </div>
 
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
