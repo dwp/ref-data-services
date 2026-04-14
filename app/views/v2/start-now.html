@@ -2,10 +2,24 @@
 
 {% set pageName="RDS" %}
 
+
+{% block header %}
+
+<div style="position: relative;">
+
+  {{ dwpHeader({
+      serviceName: "Reference data services",
+      serviceHref: '#',
+      container: true,
+      navigation: {
+      }
+  }) }}
+
+</div>
+
+{% endblock %}
+
 {% block content %}
-
-
-
 
 
 <div class="govuk-grid-row">
