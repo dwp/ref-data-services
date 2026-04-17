@@ -190,11 +190,11 @@ Apply filters
   </ol>
 </nav>
 
-<h1 class="govuk-heading-l" style="margin-top: -7px;">Office locations</h1>
+<h1 class="govuk-heading-l" style="margin-top: -12px;">Office locations</h1>
 
 <!-- EXPORT BUTTON -->
 
-<div class="action-bar govuk-!-margin-bottom-0 govuk-!-padding-bottom-0">
+<div class="action-bar govuk-!-margin-bottom-4 govuk-!-padding-bottom-">
 <div class="govuk-form-group govuk-!-margin-bottom-0 govuk-!-padding-bottom-0">
 
 <button class="govuk-button govuk-button--secondary govuk-!-margin-top-0">
@@ -217,37 +217,104 @@ tabindex="0"
 style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; box-sizing: border-box;">
 
   <!-- ADD min-width HERE -->
-  <table class="govuk-table" style="min-width: 1400px;">
+  <table class="govuk-table" style="min-width: 1100px;">
 
-    
-    <!-- your table content... -->
 
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th class="govuk-table__header">Name</th>
-        <th class="govuk-table__header">Code</th>
-        <th class="govuk-table__header">Alias</th>
-        <th class="govuk-table__header">DWP Location</th>
-        <th class="govuk-table__header">Office Type</th>
-        <th class="govuk-table__header">CWID</th>
-        <th class="govuk-table__header">LMS Mnemonic</th>
-      </tr>
-    </thead>
+   <!-- ✅ ADD COLGROUP HERE -->
+    <colgroup>
+      <col class="col-checkbox">     <!-- checkbox -->
+      <col style="width: 150px">     <!-- Name -->
+      <col style="width: 150px">      <!-- Code -->
+      <col>                          <!-- Alias -->
+      <col>                          <!-- DWP Location -->
+      <col>                          <!-- Office Type -->
+      <col style="width: 120px">     <!-- CWID -->
+      <col>                          <!-- LMS Mnemonic -->
+    </colgroup>
 
-    <tbody class="govuk-table__body">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
 
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">26.4 Reach Youth Hub</td>
-        <td class="govuk-table__cell">111553</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell">Youth Hub</td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
+    <!-- Select all -->
+    <th class="govuk-table__header govuk-table__header--checkbox">
+      <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input
+            class="govuk-checkboxes__input"
+            id="select-all"
+            type="checkbox">
+          <label class="govuk-label govuk-checkboxes__label" for="select-all">
+            <span class="govuk-visually-hidden">Select all rows</span>
+          </label>
+        </div>
+      </div>
+    </th>
 
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">AFC Wimbledon Youth...</td>
+    <th class="govuk-table__header">Name</th>
+    <th class="govuk-table__header">Code</th>
+    <th class="govuk-table__header">Alias</th>
+    <th class="govuk-table__header">DWP Location</th>
+    <th class="govuk-table__header">Office Type</th>
+    <th class="govuk-table__header">CWID</th>
+    <th class="govuk-table__header">LMS Mnemonic</th>
+  </tr>
+</thead>
+
+
+
+  <!-- ✅ checkbox cell FIRST -->
+  <tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-table__cell--checkbox">
+<div class="govuk-checkboxes govuk-checkboxes--small">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input"
+id="row-1"
+type="checkbox">
+<label class="govuk-label govuk-checkboxes__label"
+for="row-1">
+<span class="govuk-visually-hidden">
+Select 26.4 Reach Youth Hub
+</span>
+</label>
+</div>
+</div>
+</td>
+
+ 
+  <td class="govuk-table__cell">26.4 Reach Youth </td>
+  <td class="govuk-table__cell">111553</td>
+  <td class="govuk-table__cell"></td>
+  <td class="govuk-table__cell">No</td>
+  <td class="govuk-table__cell">Youth Hub</td>
+  <td class="govuk-table__cell">N/A</td>
+  <td class="govuk-table__cell"></td>
+
+</tr>
+
+
+  <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-2"
+          name="selected-rows"
+          type="checkbox"
+          value="2">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+
+
+
+        <td class="govuk-table__cell">AFC Wimbledon ...</td>
         <td class="govuk-table__cell">112153</td>
         <td class="govuk-table__cell"></td>
         <td class="govuk-table__cell">No</td>
@@ -256,17 +323,27 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell">ACD</td>
       </tr>
 
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ASNUQ (BT)</td>
-        <td class="govuk-table__cell">110113</td>
-        <td class="govuk-table__cell">ASNUQ (BT)</td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell">Youth Hub</td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-      <tr class="govuk-table__row">
+        
+        <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-3"
+          name="selected-rows"
+          type="checkbox"
+          value="3">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
         <td class="govuk-table__cell">26.4 Reach Youth Hub</td>
         <td class="govuk-table__cell">111553</td>
         <td class="govuk-table__cell"></td>
@@ -276,7 +353,29 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
-      <tr class="govuk-table__row">
+     
+
+<td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-4"
+          name="selected-rows"
+          type="checkbox"
+          value="4">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+         
         <td class="govuk-table__cell">ASNUQ (BT)110113</td>
         <td class="govuk-table__cell">110113</td>
         <td class="govuk-table__cell">ASNUQ (BT)</td>
@@ -286,7 +385,29 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell">ABE</td>
       </tr>
 
-      <tr class="govuk-table__row">
+
+
+<td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-5"
+          name="selected-rows"
+          type="checkbox"
+          value="5">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+
         <td class="govuk-table__cell">ASNOU (BT)</td>
         <td class="govuk-table__cell">110113</td>
         <td class="govuk-table__cell">ASNOU (BT)</td>
@@ -296,8 +417,29 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Andover Data Ce...</td>
+
+<td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-6"
+          name="selected-rows"
+          type="checkbox"
+          value="6">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+
+          <td class="govuk-table__cell">ATOS Andover Data Ce...</td>
         <td class="govuk-table__cell">400305</td>
         <td class="govuk-table__cell">ATOS Andover Data Centre</td>
         <td class="govuk-table__cell">No</td>
@@ -306,8 +448,28 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Birmingham Busi...</td>
+
+<td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-7"
+          name="selected-rows"
+          type="checkbox"
+          value="7">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+    <td class="govuk-table__cell">ATOS Birmingham Busi...</td>
         <td class="govuk-table__cell">400306</td>
         <td class="govuk-table__cell">ATOS Birmingham Business P...</td>
         <td class="govuk-table__cell">No</td>
@@ -316,8 +478,28 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS DWP PIP service ...</td>
+
+<td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-8"
+          name="selected-rows"
+          type="checkbox"
+          value="8">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+    <td class="govuk-table__cell">ATOS DWP PIP service ...</td>
         <td class="govuk-table__cell">400341</td>
         <td class="govuk-table__cell">ATOS Healthcare PIP service... </td>
         <td class="govuk-table__cell">No</td>
@@ -325,9 +507,29 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell">N/A</td>
         <td class="govuk-table__cell"></td>
       </tr>
+     
 
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Healthcare DWP ...</td>
+ <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-9"
+          name="selected-rows"
+          type="checkbox"
+          value="9">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+    <td class="govuk-table__cell">ATOS Healthcare DWP ...</td>
         <td class="govuk-table__cell">400204</td>
         <td class="govuk-table__cell">ASNUQ (BT)</td>
         <td class="govuk-table__cell">No</td>
@@ -336,8 +538,28 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Longbridge Data ...</td>
+
+     <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-10"
+          name="selected-rows"
+          type="checkbox"
+          value="10">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+ <td class="govuk-table__cell">ATOS Longbridge Data ...</td>
         <td class="govuk-table__cell">111151</td>
         <td class="govuk-table__cell"></td>
         <td class="govuk-table__cell">No</td>
@@ -346,7 +568,28 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
-    <tr class="govuk-table__row">
+    
+     <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-11"
+          name="selected-rows"
+          type="checkbox"
+          value="11">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+ 
         <td class="govuk-table__cell">ATOS Wearside House ...</td>
         <td class="govuk-table__cell">400435</td>
         <td class="govuk-table__cell"></td>
@@ -355,8 +598,30 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell">N/A</td>
         <td class="govuk-table__cell"></td>
       </tr>
+      
+      
 
-    <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-12"
+          name="selected-rows"
+          type="checkbox"
+          value="12">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+
         <td class="govuk-table__cell">Aberdare Jobcentre</td>
         <td class="govuk-table__cell">100708</td>
         <td class="govuk-table__cell">Aberdare Jobcentre Plus</td>
@@ -366,8 +631,29 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Longbridge Data ...</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-13"
+          name="selected-rows"
+          type="checkbox"
+          value="13">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+
+       <td class="govuk-table__cell">ATOS Longbridge Data ...</td>
         <td class="govuk-table__cell">111151</td>
         <td class="govuk-table__cell"></td>
         <td class="govuk-table__cell">No</td>
@@ -376,8 +662,28 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Healthcare DWP ...</td>
+ <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-14"
+          name="selected-rows"
+          type="checkbox"
+          value="14">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+
+       <td class="govuk-table__cell">ATOS Healthcare DWP ...</td>
         <td class="govuk-table__cell">400204</td>
         <td class="govuk-table__cell">ASNUQ (BT)</td>
         <td class="govuk-table__cell">No</td>
@@ -386,18 +692,29 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
-     <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Healthcare DWP ...</td>
-        <td class="govuk-table__cell">400204</td>
-        <td class="govuk-table__cell">ASNUQ (BT)</td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
 
-     <tr class="govuk-table__row">
-        <td class="govuk-table__cell">26.4 Reach Youth Hub</td>
+ <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-15"
+          name="selected-rows"
+          type="checkbox"
+          value="15">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+
+          <td class="govuk-table__cell">26.4 Reach Youth Hub</td>
         <td class="govuk-table__cell">111553</td>
         <td class="govuk-table__cell"></td>
         <td class="govuk-table__cell">No</td>
@@ -406,8 +723,30 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
-       <tr class="govuk-table__row">
-        <td class="govuk-table__cell">AFC Wimbledon Youth...</td>
+
+
+ <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-16"
+          name="selected-rows"
+          type="checkbox"
+          value="16">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+
+       <td class="govuk-table__cell">AFC Wimbledon Youth...</td>
         <td class="govuk-table__cell">112153</td>
         <td class="govuk-table__cell"></td>
         <td class="govuk-table__cell">No</td>
@@ -416,8 +755,29 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell">ACD</td>
       </tr>
 
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Healthcare DWP ...</td>
+
+     <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-17"
+          name="selected-rows"
+          type="checkbox"
+          value="17">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+
+          <td class="govuk-table__cell">ATOS Healthcare DWP ...</td>
         <td class="govuk-table__cell">400204</td>
         <td class="govuk-table__cell">ASNUQ (BT)</td>
         <td class="govuk-table__cell">No</td>
@@ -426,7 +786,28 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
-     <tr class="govuk-table__row">
+      
+
+     <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-18"
+          name="selected-rows"
+          type="checkbox"
+          value="18">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
         <td class="govuk-table__cell">26.4 Reach Youth Hub</td>
         <td class="govuk-table__cell">111553</td>
         <td class="govuk-table__cell"></td>
@@ -436,7 +817,26 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
-  <tr class="govuk-table__row">
+
+   <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-19"
+          name="selected-rows"
+          type="checkbox"
+          value="19">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
         <td class="govuk-table__cell">ASNUQ (BT)110113</td>
         <td class="govuk-table__cell">110113</td>
         <td class="govuk-table__cell">ASNUQ (BT)</td>
@@ -446,7 +846,30 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell">ABE</td>
       </tr>
 
-       <tr class="govuk-table__row">
+
+
+
+   <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-20"
+          name="selected-rows"
+          type="checkbox"
+          value="20">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+
+     
         <td class="govuk-table__cell">26.4 Reach Youth Hub</td>
         <td class="govuk-table__cell">111553</td>
         <td class="govuk-table__cell"></td>
@@ -456,7 +879,29 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
-    <tr class="govuk-table__row">
+
+
+   <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-21"
+          name="selected-rows"
+          type="checkbox"
+          value="21">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+
+ 
         <td class="govuk-table__cell">ATOS Birmingham Busi...</td>
         <td class="govuk-table__cell">400306</td>
         <td class="govuk-table__cell">ATOS Birmingham Business P...</td>
@@ -466,7 +911,29 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell"></td>
       </tr>
 
- <tr class="govuk-table__row">
+
+
+   <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-22"
+          name="selected-rows"
+          type="checkbox"
+          value="22">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+
+
         <td class="govuk-table__cell">AFC Wimbledon Youth...</td>
         <td class="govuk-table__cell">112153</td>
         <td class="govuk-table__cell"></td>
