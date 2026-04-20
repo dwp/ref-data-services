@@ -53,8 +53,8 @@ padding: 0 0.75rem; /* left + right padding */
 .govuk-table__header {
   padding-top: 20px;
   padding-bottom: 12px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
   vertical-align: top;
 }
 
@@ -74,8 +74,19 @@ padding: 0 0.75rem; /* left + right padding */
   padding: 0;
 }
 
+/* table sort */
+.table-sort {
+display: inline-flex;
+align-items: flex-start;
+gap: 4px;
+}
 
-
+.table-sort-arrows {
+display: inline-flex;
+flex-direction: column;
+font-size: 0.6em;
+line-height: 1;
+}
 
 
 
