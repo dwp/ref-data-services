@@ -35,6 +35,7 @@
 
 {% endblock %}
 
+
 {# 3 Optional: before-content area (breadcrumbs, phase banner, etc.) #}
 {% block beforeContent %}
   {# e.g. {{ govukBackLink({ href: "all-dataset", text: "Back" }) }} #}
@@ -77,7 +78,7 @@ aria-describedby="search-hint"
 spellcheck="false"
 >
 
-<a href=""
+<a href="dataset-view-search"
 class="govuk-button moj-search__button"
 style="margin-left: 6px; display: flex; align-items: center; justify-content: center;">
 
@@ -178,6 +179,7 @@ Apply filters
 <!-- MAIN CONTENT COLUMN ---------------------------------------------------->
 <div class="govuk-grid-column-three-quarters">
 
+  <!-- Breadcrumbs-->
 <nav class="govuk-breadcrumbs govuk-!-margin-bottom-7" aria-label="Breadcrumb">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
@@ -189,13 +191,13 @@ Apply filters
   </ol>
 </nav>
 
-
-<h1 class="govuk-heading-l" style="margin-top: -7px;">Office locations</h1>
+<h1 class="govuk-heading-l" style="margin-top: -12px;">Office locations</h1>
 
 <!-- EXPORT BUTTON -->
 
-<div class="action-bar govuk-!-margin-bottom-0 govuk-!-padding-bottom-0">
-<div class="govuk-form-group govuk-!-margin-bottom-0 govuk-!-padding-bottom-0">
+<div class="action-bar govuk-!-margin-bottom-4 govuk-!-padding-bottom-8">
+<div class="govuk-form-group govuk-!-margin-bottom-2 govuk-!-padding-bottom-8"> <!-- THIS FIXES THE WHITE SPACE BETWEEN THE TABLE AND BUTTONS -->
+
 
 <button class="govuk-button govuk-button--secondary govuk-!-margin-top-0">
 Download CSV file
@@ -216,40 +218,174 @@ aria-label="Office locations table"
 tabindex="0"
 style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; box-sizing: border-box;">
 
-  <!-- ADD min-width HERE -->
-  <table class="govuk-table" style="min-width: 1400px;">
+  <!-- ADD minimum Table width HERE -->
+<table class="govuk-table"<table class="govuk-tableable-table"      
+ style="min-width: 1200px;">
 
-      
+
+   <!-- ✅ ADD COLGROUP HERE -->
+    <colgroup>
+      <col class="col-checkbox">     <!-- checkbox -->
+      <col style="width: 150px">     <!-- Name -->
+      <col style="width: 150px">      <!-- Code -->
+      <col>                          <!-- Alias -->
+      <col>                          <!-- DWP Location -->
+      <col>                          <!-- Office Type -->
+      <col style="width: 120px">     <!-- CWID -->
+      <col>                          <!-- LMS Mnemonic -->
+    </colgroup>
+ 
+    <!-- Table header-->
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+
+  
+
+    <!--Checkbox column (Not sortbale) -->
+    <th class="govuk-table__header govuk-table__header--checkbox">
+      <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input
+            class="govuk-checkboxes__input"
+            id="select-all"
+            type="checkbox">
+          <label class="govuk-label govuk-checkboxes__label" for="select-all">
+            <span class="govuk-visually-hidden">Select all rows</span>
+          </label>
+        </div>
+      </div>
+    </th>
+
+
+<th class="govuk-table__header">
+<span class="table-sort">
+Name
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
     
-    
-    <!-- your table content... -->
+<th class="govuk-table__header">
+<span class="table-sort">
+Code
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
 
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th class="govuk-table__header">Name</th>
-        <th class="govuk-table__header">Code</th>
-        <th class="govuk-table__header">Alias</th>
-        <th class="govuk-table__header">DWP Location</th>
-        <th class="govuk-table__header">Office Type</th>
-        <th class="govuk-table__header">CWID</th>
-        <th class="govuk-table__header">LMS Mnemonic</th>
-      </tr>
-    </thead>
+<th class="govuk-table__header">
+<span class="table-sort">
+Alias
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
 
-    <tbody class="govuk-table__body">
 
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">26.4 Reach <strong>Youth</strong> Hub</td>
-        <td class="govuk-table__cell">111553</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"><strong>Youth</strong> Hub</td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
+<th class="govuk-table__header">
+<span class="table-sort">
+DWP Location
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
 
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">AFC Wimbledon <strong>Youth</strong> ...</td>
+   <th class="govuk-table__header">
+<span class="table-sort">
+Office Type
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
+   
+   <th class="govuk-table__header">
+<span class="table-sort">
+CWID
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
+   
+       <th class="govuk-table__header">
+<span class="table-sort">
+LMS Mnemonic
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
+
+  </tr>
+</thead>
+
+
+
+  <!-- ✅ checkbox cell FIRST -->
+  <tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-table__cell--checkbox">
+<div class="govuk-checkboxes govuk-checkboxes--small">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input"
+id="row-1"
+type="checkbox">
+<label class="govuk-label govuk-checkboxes__label"
+for="row-1">
+<span class="govuk-visually-hidden">
+Select 26.4 Reach Youth Hub
+</span>
+</label>
+</div>
+</div>
+</td>
+
+ 
+    <td class="govuk-table__cell">26.4 Reach <strong>Youth</strong> Hub</td>
+  <td class="govuk-table__cell">111553</td>
+  <td class="govuk-table__cell"></td>
+  <td class="govuk-table__cell">No</td>
+  <td class="govuk-table__cell"><strong>Youth</strong> Hub</td>
+  <td class="govuk-table__cell">N/A</td>
+  <td class="govuk-table__cell"></td>
+
+</tr>
+
+
+  <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-2"
+          name="selected-rows"
+          type="checkbox"
+          value="2">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+
+
+
+        <td class="govuk-table__cell">AFC Wimbledon</td>
         <td class="govuk-table__cell">112153</td>
         <td class="govuk-table__cell"></td>
         <td class="govuk-table__cell">No</td>
@@ -258,27 +394,59 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell">ACD</td>
       </tr>
 
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ASNUQ (BT)</td>
-        <td class="govuk-table__cell">110113</td>
-        <td class="govuk-table__cell">ASNUQ (BT)</td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"><strong>Youth</strong> Hub</td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">26.4 Reach <strong>Youth</strong> Hub</td>
+        
+        <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-3"
+          name="selected-rows"
+          type="checkbox"
+          value="3">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+          <td class="govuk-table__cell">26.4 Reach <strong>Youth</strong> Hub</td>
         <td class="govuk-table__cell">111553</td>
         <td class="govuk-table__cell"></td>
         <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"><strong>Youth</strong> Hub</td>
+       <td class="govuk-table__cell"><strong>Youth</strong> Hub</td>
         <td class="govuk-table__cell">N/A</td>
         <td class="govuk-table__cell"></td>
       </tr>
 
-      <tr class="govuk-table__row">
+     
+
+<td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-4"
+          name="selected-rows"
+          type="checkbox"
+          value="4">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+         
         <td class="govuk-table__cell">ASNUQ (BT)110113</td>
         <td class="govuk-table__cell">110113</td>
         <td class="govuk-table__cell">ASNUQ (BT)</td>
@@ -288,230 +456,71 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
         <td class="govuk-table__cell">ABE</td>
       </tr>
 
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ASNOU (BT)</td>
-        <td class="govuk-table__cell">110113</td>
-        <td class="govuk-table__cell">ASNOU (BT)</td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Andover Data Ce...</td>
-        <td class="govuk-table__cell">400305</td>
-        <td class="govuk-table__cell">ATOS Andover Data Centre</td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Birmingham Busi...</td>
+  <td class="govuk-table__cell govuk-table__cell--checkbox">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input
+          class="govuk-checkboxes__input"
+          id="row-7"
+          name="selected-rows"
+          type="checkbox"
+          value="7">
+        <label
+          class="govuk-label govuk-checkboxes__label"
+          for="row-1">
+          <span class="govuk-visually-hidden">
+            Select 26.4 Reach Youth Hub
+          </span>
+        </label>
+      </div>
+    </div>
+  </td>
+    
+    <td class="govuk-table__cell">ATOS Birmingham Business</td>
         <td class="govuk-table__cell">400306</td>
-        <td class="govuk-table__cell">ATOS Birmingham Business P...</td>
+        <td class="govuk-table__cell">ATOS Birmingham Business</td>
         <td class="govuk-table__cell">No</td>
         <td class="govuk-table__cell"></td>
         <td class="govuk-table__cell">N/A</td>
         <td class="govuk-table__cell"></td>
       </tr>
-
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS DWP PIP service ...</td>
-        <td class="govuk-table__cell">400341</td>
-        <td class="govuk-table__cell">ATOS Healthcare PIP service... </td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Healthcare DWP ...</td>
-        <td class="govuk-table__cell">400204</td>
-        <td class="govuk-table__cell">ASNUQ (BT)</td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Longbridge Data ...</td>
-        <td class="govuk-table__cell">111151</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Wearside House ...</td>
-        <td class="govuk-table__cell">400435</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">Aberdare Jobcentre</td>
-        <td class="govuk-table__cell">100708</td>
-        <td class="govuk-table__cell">Aberdare Jobcentre Plus</td>
-        <td class="govuk-table__cell">Yes</td>
-        <td class="govuk-table__cell">Jobcentre</td>
-        <td class="govuk-table__cell">620669</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Longbridge Data ...</td>
-        <td class="govuk-table__cell">111151</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Healthcare DWP ...</td>
-        <td class="govuk-table__cell">400204</td>
-        <td class="govuk-table__cell">ASNUQ (BT)</td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-     <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Healthcare DWP ...</td>
-        <td class="govuk-table__cell">400204</td>
-        <td class="govuk-table__cell">ASNUQ (BT)</td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-     <tr class="govuk-table__row">
-        <td class="govuk-table__cell">26.4 Reach <strong>Youth</strong> Hub</td>
-        <td class="govuk-table__cell">111553</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"><strong>Youth</strong> Hub</td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-       <tr class="govuk-table__row">
-        <td class="govuk-table__cell">AFC Wimbledon <strong>Youth</strong> ...</td>
-        <td class="govuk-table__cell">112153</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"><strong>Youth</strong> Hub</td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell">ACD</td>
-      </tr>
-
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Healthcare DWP ...</td>
-        <td class="govuk-table__cell">400204</td>
-        <td class="govuk-table__cell">ASNUQ (BT)</td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-     <tr class="govuk-table__row">
-        <td class="govuk-table__cell">26.4 Reach <strong>Youth</strong> Hub</td>
-        <td class="govuk-table__cell">111553</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"><strong>Youth</strong> Hub</td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-  <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ASNUQ (BT)110113</td>
-        <td class="govuk-table__cell">110113</td>
-        <td class="govuk-table__cell">ASNUQ (BT)</td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"><strong>Youth</strong> Hub</td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell">ABE</td>
-      </tr>
-
-       <tr class="govuk-table__row">
-       <td class="govuk-table__cell">26.4 Reach <strong>Youth</strong> Hub</td>
-        <td class="govuk-table__cell">111553</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"><strong>Youth</strong> Hub</td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell">ATOS Birmingham Busi...</td>
-        <td class="govuk-table__cell">400306</td>
-        <td class="govuk-table__cell">ATOS Birmingham Business P...</td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-
- <tr class="govuk-table__row">
-        <td class="govuk-table__cell">AFC Wimbledon <strong>Youth</strong> ...</td>
-        <td class="govuk-table__cell">112153</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell">No</td>
-        <td class="govuk-table__cell"><strong>Youth</strong> Hub</td>
-        <td class="govuk-table__cell">N/A</td>
-        <td class="govuk-table__cell">ACD</td>
+ 
 
     </tbody>
+
   </table>
+
 
 </div>
 
 <!-- Add spacing below scrollbar -->
- <div style="margin-top: 40px;"></div>
+ <div style="margin-top: 32px;"></div>
 
 <!--- Dropdown menu-->
 
 <div class="govuk-form-group" style="float: right;">
 <label class="govuk-label" for="sort">Select records per page</label>
 <select class="govuk-select" id="sort" name="sort">
-<option value="updated" selected>25 records</option>
-<option value="views">50 records</option>
-<option value="comments">100 records</option>
+<option value="updated" selected>5 records</option>
+<option value="views">10 records</option>
+<option value="views">25 records</option>
+<option value="comments">50 records</option>
 </select>
 </div>
+
 
 <!-- PAGINATION -->
 
 <nav class="govuk-pagination" aria-label="Pagination">
   <ul class="govuk-pagination__list">
     <li class="govuk-pagination__item govuk-pagination__item--current">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
-        1
-      </a>
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
     </li>
     <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="" aria-label="Page 2">
-        2
-      </a>
+      <a class="govuk-link govuk-pagination__link" href="" aria-label="Page 2">2</a>
     </li>
-   
   </ul>
+
   <div class="govuk-pagination__next">
     <a class="govuk-link govuk-pagination__link" href="" rel="next">
       <span class="govuk-pagination__link-title">
@@ -523,14 +532,10 @@ style="margin-top: -160px; overflow-x: auto; overflow-y: hidden; width: 100%; ma
     </a>
   </div>
 </nav>
+
 <p class="moj-pagination__results" style="margin-top: -12px;">
   Page 1 of 2
 </p>
-
-
-
-</div>
-</div>
 
 
 
