@@ -114,4 +114,21 @@ line-height: 1;
   font-size: 15px;
 }
 
+/* Search highlighter */
+.govuk-table .hods-highlight {  
+  background-color: #facd92; 
+  padding: 0 4px;
+  margin-right: 6px; 
+  border-bottom: 4px solid #f09a36;
+}
 
+/* search field */
+.moj-search__input-wrapper {
+display: flex;
+gap: 6px;
+}
+
+.moj-search__button {
+padding: 10px 16px;
+line-height: 0.8;
+}
