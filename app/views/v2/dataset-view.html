@@ -146,19 +146,19 @@ Apply filters
 <!-- Search field with hint -->
 <form method="get" action="#" class="govuk-!-margin-bottom-8">
 
-<div class="govuk-form-group">
-<label class="govuk-label" for="search-datasets">Search records</label>
-<div id="search-hint" class="govuk-hint">
-Search by text
+<div class="govuk-input__wrapper">
+
+  <input class="govuk-input" id="search-datasets" name="query" type="text" aria-describedby="search-hint">
+
+  <a href="dataset-view-search"
+     class="govuk-button govuk-button--primary"
+     style="margin-left: 8px;"
+     role="button">
+    Search
+  </a>
+
 </div>
 
-<div class="govuk-input__wrapper">
-<input class="govuk-input" id="search-datasets" name="query" type="text" aria-describedby="search-hint">
-<button class="govuk-button govuk-button--primary" style="margin-left: 8px;" type="submit">
-Search
-</button>
-</div>
-</div>
 
 <!-- EXPORT BUTTON -->
 
