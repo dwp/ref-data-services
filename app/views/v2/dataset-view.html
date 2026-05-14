@@ -146,9 +146,14 @@ Apply filters
 <!-- Search field with hint -->
 <form method="get" action="#" class="govuk-!-margin-bottom-8">
 
-<div class="govuk-input__wrapper">
+<div class="govuk-form-group">
+<label class="govuk-label" for="search-datasets">Search records</label>
+<div id="search-hint" class="govuk-hint">
+Search by text
+</div>
 
-  <input class="govuk-input" id="search-datasets" name="query" type="text" aria-describedby="search-hint">
+<div class="govuk-input__wrapper">
+<input class="govuk-input" id="search-datasets" name="query" type="text" aria-describedby="search-hint">
 
   <a href="dataset-view-search"
      class="govuk-button govuk-button--primary"
@@ -156,9 +161,8 @@ Apply filters
      role="button">
     Search
   </a>
-
 </div>
-
+</div>
 
 <!-- EXPORT BUTTON -->
 
@@ -266,7 +270,7 @@ LMS Mnemonic
 
   </tr>
 </thead>
-  <td class="govuk-table__cell">  <a href="your-link-here" class="govuk-link"> 26.4 Reach Youth  </a></td>
+  <td class="govuk-table__cell">  <a href="your-link-here" class="govuk-link"> 26.4 Reach Youth</a></td>
   <td class="govuk-table__cell">111553</td>
   <td class="govuk-table__cell"></td>
   <td class="govuk-table__cell">No</td>
