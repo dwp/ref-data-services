@@ -8,30 +8,59 @@
 
 {% block header %}
 
-<div style="position: relative;">
-
-  {{ dwpHeader({
-      serviceName: "Reference data services",
-      serviceHref: '#',
-      container: true,
-      navigation: {
-        items: [
-          { href: "#", text: "Value" },
-          { href: "#", text: "Summary" },
-          { href: "#", text: "Audit history" },
-          { href: "#", text: "Data dictionary" },
-          { href: "#", text: "Data quality" },
-          { href: "#", text: "Data catalogue" }
-        ]
-      }
-  }) }}
-
-  <!-- Sign-out -->
-  <div class="dwp-header__service-action">
-    <a href="/sign-out" class="dwp-header__link">John Doe - Sign out</a>
-  </div>
-
-</div>
+<header data-module="dwp-internal-service-header" class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name">
+      <a href="#" class="dwp-header__link">Reference data services</a>
+    </div>
+    <nav class="dwp-header-navigation"
+      aria-label="Primary">
+      <button type="button" class="dwp-header-navigation__menu-button" aria-controls="navigation" hidden>
+        Menu
+      </button>
+      
+      <ul id="navigation" class="dwp-header-navigation__list">
+        <li class="dwp-header-navigation__item">
+          <a
+            href="#">
+           Value
+          </a>
+        </li>
+         <li class="dwp-header-navigation__item">
+          <a
+            href="#">
+           Summary
+          </a>
+        </li>
+        <li class="dwp-header-navigation__item">
+          <a
+            href="#">
+           Audit history
+          </a>
+        </li>
+        <li class="dwp-header-navigation__item">
+          <a
+            href="#">
+            Data dictionary
+          </a>
+        </li>
+        <li class="dwp-header-navigation__item">
+          <a
+            href="#">
+       Data quality
+          </a>
+        </li>
+        <li class="dwp-header-navigation__item">
+          <a
+            href="#">
+            Data catalouge
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+</header>
 
 {% endblock %}
 

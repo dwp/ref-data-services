@@ -4,22 +4,16 @@
 
 {% block header %}
 
-<div style="position: relative;">
-
-  {{ dwpHeader({
-      serviceName: "Reference data services",
-      serviceHref: '#',
-      container: true,
-      navigation: {
-      }
-  }) }}
-
-  <!-- Sign-out -->
-  <div class="dwp-header__service-action">
-    <a href="/sign-out" class="dwp-header__link">John Doe - Sign out</a>
-  </div>
-
-</div>
+<header class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name dwp-header__service-name--with-action">
+      <a href="#" class="dwp-header__link">Reference data services </a>
+    </div>
+    <div class="dwp-header__service-action">
+      <a href="#" class="dwp-header__link">John Doe - Sign out</a>
+    </div>
+  </div>
+</header>
 
 {% endblock %}
 
