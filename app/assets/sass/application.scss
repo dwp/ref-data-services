@@ -93,13 +93,12 @@ line-height: 1;
 .search-tight {    margin-bottom: -18px !important;   
   /* Increase or decrease as needed */}
 
-/* Position Sign out so it aligns with the service name */
+/* Position Sign out so it aligns with the service name 
 .dwp-header__service-action {
   position: absolute;
   right: 360px;
   top: 32px;  
-  display: block;
-}
+  display: block;*/
 
 .dwp-header__service-action .dwp-header__link {
   color: #fff !important;
