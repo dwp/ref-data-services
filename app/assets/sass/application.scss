@@ -5,17 +5,9 @@
 
 // Add extra styles here
 
+
+/* Buttons padding e*/
 .action-bar {  display: flex;  align-items: center;  gap: 16px; /* space between button + select */}
-
-/* Add spacing between DWP header tabs */
-.dwp-header-navigation__item {
-margin-right: 1rem; /* spacing between tabs */
-}
-
-/* Optional: make each tab wider */
-.dwp-header-navigation__item a {
-padding: 0 0.75rem; /* left + right padding */
-}
 
 /* MOJ scrollable table*/
 .moj-scrollable-pane {
@@ -43,10 +35,6 @@ padding: 0 0.75rem; /* left + right padding */
   border-spacing: 0;
 }
 
-/* Checkbox column width */
-.col-checkbox {
-  width: 32px;
-}
 
 /* Standard GOV.UK table padding */
 .govuk-table__cell,
@@ -58,21 +46,8 @@ padding: 0 0.75rem; /* left + right padding */
   vertical-align: top;
 }
 
-/* Checkbox column padding + alignment */
-.govuk-table__cell--checkbox,
-.govuk-table__header--checkbox {
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-top: 12px;
-  vertical-align: top;
-}
 
-/* Remove extra checkbox spacing */
-.govuk-table__cell--checkbox .govuk-checkboxes,
-.govuk-table__cell--checkbox .govuk-checkboxes__item {
-  margin: 0;
-  padding: 0;
-}
+
 
 /* table sort */
 .table-sort {
@@ -92,13 +67,6 @@ line-height: 1;
 /* Pull accordion upward so it's closer to the search field */
 .search-tight {    margin-bottom: -18px !important;   
   /* Increase or decrease as needed */}
-
-/* Position Sign out so it aligns with the service name 
-.dwp-header__service-action {
-  position: absolute;
-  right: 360px;
-  top: 32px;  
-  display: block;*/
 
 .dwp-header__service-action .dwp-header__link {
   color: #fff !important;
