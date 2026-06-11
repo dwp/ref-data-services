@@ -11,14 +11,19 @@
 
 /* MOJ scrollable table*/
 .moj-scrollable-pane {
-  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 10px;
+  background: linear-gradient(90deg, #fff, #fff, #fff0 1.5em), radial-gradient(farthest-side at 0 50%, #0003, #fff0), linear-gradient(270deg, #fff, #fff, #fff0 1.5em), radial-gradient(farthest-side at 100% 50%, #0003, #fff0) 100%;
+    background-attachment: local, scroll, local, scroll;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, .75em 100%, 100% 100%, .75em 100%;
+    overflow-x: scroll;
 }
 
 .moj-scrollable-pane:focus {
-  outline: 3px solid #fd0;
-  outline-offset: 0;
+box-shadow: 0 0 0 4px var(--govuk-focus-colour, #fd0), 0 0 0 8px var(--govuk-focus-text-colour, #0b0c0c);
+outline: 3px solid #0000;
 }
 
 .moj-scrollable-pane::after {
