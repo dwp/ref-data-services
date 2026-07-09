@@ -62,3 +62,23 @@ router.get('/v2/start-now', function (req, res) {
 })
 
 
+// ---------------------------
+// V3 ROUTES
+// ---------------------------
+
+// Apply RDS only to v3 pages
+router.all('/v3/*', function (req, res, next) {
+  res.locals.serviceName = 'RDS'
+  next()
+})
+
+// Start page
+router.get('/v3/', function (req, res) {
+  res.render('v3/index')
+})
+
+// Next page
+router.get('/v3/start-now', function (req, res) {
+  res.render('v3/start-now')
+})
+

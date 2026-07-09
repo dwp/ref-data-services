@@ -1,0 +1,400 @@
+{% extends "layouts/main.html" %}
+
+
+{# 1 Import the macro #}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
+
+{# 2 Override the header block to render the internal service header #}
+
+{% block header %}
+
+<div style="position: relative;">
+
+  {{ dwpHeader({
+      serviceName: "Reference data services",
+      serviceHref: '#',
+      container: true,
+      action: "John Doe - Sign out",
+      actionHref: "#",
+      navigation: {
+        items: [
+          { href: "#", text: "Value" },
+          { href: "#", text: "Summary" },
+          { href: "#", text: "Audit history" },
+          { href: "#", text: "Data dictionary" },
+          { href: "#", text: "Data quality" },
+          { href: "#", text: "Data catalogue" }
+        ]
+      }
+  }) }}
+
+</div>
+
+{% endblock %}
+
+
+{# 3 Optional: before-content area (breadcrumbs, phase banner, etc.) #}
+{% block beforeContent %}
+  {# e.g. {{ govukBackLink({ href: "all-dataset", text: "Back" }) }} #}
+{% endblock %}
+
+{# 4 Your existing page content unchanged #}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+<!-- LEFT SIDE COLUMN ------------------------------------------->
+<div class="govuk-grid-column-one-quarter">
+
+
+<!-- FILTERS PANEL -->
+<h3 class="govuk-heading-s govuk-!-margin-bottom-4 govuk-!-margin-top-4">  Filters</h3>
+<div id="search-hint"
+class="govuk-hint govuk-!-margin-bottom-6"
+style="margin-top: 8px;">
+Select one or more of the filters from the list and apply
+</div>
+
+
+<!-- STATUS -->
+<h4 class="govuk-heading-s">Status</h4>
+
+<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="active" name="status" type="checkbox" value="active">
+<label class="govuk-label govuk-checkboxes__label" for="active">
+Active
+</label>
+</div>
+
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="closed" name="status" type="checkbox" value="closed">
+<label class="govuk-label govuk-checkboxes__label" for="closed">
+Closed
+</label>
+</div>
+
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="mobilised" name="status" type="checkbox" value="mobilised">
+<label class="govuk-label govuk-checkboxes__label" for="mobilised">
+Mothballed
+</label>
+</div>
+</div>
+
+<!-- DWP LOCATION -->
+<h4 class="govuk-heading-s govuk-!-margin-top-4">DWP location</h4>
+
+<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="yes" name="location" type="checkbox" value="yes">
+<label class="govuk-label govuk-checkboxes__label" for="yes">
+Yes
+</label>
+</div>
+
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="no" name="location" type="checkbox" value="no">
+<label class="govuk-label govuk-checkboxes__label" for="no">
+No
+</label>
+</div>
+</div>
+
+<!-- BUTTONS -------->
+
+<button class="govuk-button govuk-button--secondary govuk-!-margin-top-4">
+Apply filters
+</button>
+
+<p class="govuk-body">
+  <a href="dataset-view" class="govuk-link govuk-link--no-visited-state">Clear filters</a>
+</p>
+
+</div>
+
+<!-- MAIN CONTENT COLUMN ----------------------------------------------------> 
+<div class="govuk-grid-column-three-quarters govuk-!-padding-left-8">
+
+
+
+</form>
+
+  <!-- Breadcrumbs-->
+<nav class="govuk-breadcrumbs govuk-!-margin-bottom-8" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="landing-page">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">dataset view</a>
+    </li>
+  </ol>
+</nav>
+
+
+
+<h1 class="govuk-heading-l" style="margin-top: -8px;">Office locations</h1>
+
+
+
+<!-- Search field with hint -->
+<form method="get" action="#" class="govuk-!-margin-bottom-8">
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="search-datasets">Search records</label>
+<div id="search-hint" class="govuk-hint">
+Search by text
+</div>
+
+<div class="govuk-input__wrapper">
+<input class="govuk-input" id="search-datasets" name="query" type="text" aria-describedby="search-hint">
+
+  <a href="dataset-view-search"
+     class="govuk-button govuk-button--primary"
+     style="margin-left: 8px;"
+     role="button">
+    Search
+  </a>
+</div>
+</div>
+
+<!-- EXPORT BUTTON -->
+
+<div class="action-bar"
+     style="display: flex; justify-content: flex-end; width: 100%;">
+
+
+
+<a href="medical-name.html"
+   class="govuk-button govuk-button--secondary"
+   data-module="govuk-button">
+  Create new record
+</a>
+
+
+
+<button class="govuk-button govuk-button--secondary govuk-!-margin-top-0">
+  Download CSV file
+</button>
+
+<button class="govuk-button govuk-button--secondary govuk-!-margin-top-0">
+  Upload CSV file
+</button>
+
+
+</div>
+ <!-- THIS CLOSING DIV FIXES THE WHITE SPACE -->
+
+
+<!-- SCROLLABLE TABLE (MOJ pattern) -->
+ <div class="moj-scrollable-pane"
+role="region"
+aria-label="Office locations table"
+tabindex="0"
+style="overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; box-sizing: border-box;">
+
+  <!-- ADD minimum Table width HERE -->
+<table class="govuk-table govuk-tableable-table"      
+ style="min-width: 1200px;">
+
+<th class="govuk-table__header">
+<span class="table-sort">
+Medical condition name
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
+    
+<th class="govuk-table__header">
+<span class="table-sort">
+Code
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
+
+<th class="govuk-table__header">
+<span class="table-sort">
+Code MC
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
+
+
+<th class="govuk-table__header">
+<span class="table-sort">
+Category subgroup
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
+
+   <th class="govuk-table__header">
+<span class="table-sort">
+Disability
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
+   
+   <th class="govuk-table__header">
+<span class="table-sort">
+D code
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
+   
+       <th class="govuk-table__header">
+<span class="table-sort">
+New code
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
+
+
+       <th class="govuk-table__header">
+<span class="table-sort">
+ICD 10 code range
+<span class="table-sort-arrows" aria-hidden="true">
+<span>▲</span>
+<span>▼</span>
+</span>
+</span>
+</th>
+
+
+  </tr>
+</thead>
+  <td class="govuk-table__cell">  <a href="your-link-here" class="govuk-link"> Haematological disease</a></td>
+  <td class="govuk-table__cell">1</td>
+  <td class="govuk-table__cell">A</td>
+  <td class="govuk-table__cell">Anaemia A01, A10</td>
+  <td class="govuk-table__cell">Iron deficiency</td>
+  <td class="govuk-table__cell">D65</td>
+  <td class="govuk-table__cell">A01</td>
+  <td class="govuk-table__cell">D50</td>
+
+</tr>
+
+        <td class="govuk-table__cell"><a href="your-link-here" class="govuk-link"> Metabolic disease</td>
+        <td class="govuk-table__cell">10</td>
+        <td class="govuk-table__cell">A</td>
+        <td class="govuk-table__cell">Porphyria</td>
+        <td class="govuk-table__cell">Porphyria</td>
+        <td class="govuk-table__cell">D33</td>
+        <td class="govuk-table__cell">E12</td>
+        <td class="govuk-table__cell">E80</td>
+      </tr>
+    
+      <td class="govuk-table__cell"><a href="your-link-here" class="govuk-link"> Metabolic disease</td>
+        <td class="govuk-table__cell">101</td>
+        <td class="govuk-table__cell">E</td>
+        <td class="govuk-table__cell">Eating disorder</td>
+        <td class="govuk-table__cell">Obestiy</td>
+        <td class="govuk-table__cell">D33</td>
+        <td class="govuk-table__cell">E14</td>
+        <td class="govuk-table__cell">E66</td>
+      </tr>
+         
+   <td class="govuk-table__cell">  <a href="your-link-here" class="govuk-link"> Haematological disease</a></td>
+  <td class="govuk-table__cell">102</td>
+  <td class="govuk-table__cell">A</td>
+  <td class="govuk-table__cell">Anaemia A01, A10</td>
+  <td class="govuk-table__cell">Iron deficiency</td>
+  <td class="govuk-table__cell">D65</td>
+  <td class="govuk-table__cell">A01</td>
+  <td class="govuk-table__cell">D50</td>
+
+</tr>
+
+      <td class="govuk-table__cell"><a href="your-link-here" class="govuk-link"> Metabolic disease</td>
+        <td class="govuk-table__cell">103</td>
+        <td class="govuk-table__cell">E</td>
+        <td class="govuk-table__cell">Porphyria</td>
+        <td class="govuk-table__cell">Porphyria</td>
+        <td class="govuk-table__cell">D33</td>
+        <td class="govuk-table__cell">E12</td>
+        <td class="govuk-table__cell">E80</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+
+</div>
+
+<!-- Add spacing below scrollbar -->
+ <div style="margin-top: 32px;"></div>
+
+<!--- Dropdown menu-->
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="sort">Select records per page</label>
+<select class="govuk-select" id="sort" name="sort">
+<option value="updated" selected>5 records</option>
+<option value="views">10 records</option>
+<option value="views">25 records</option>
+<option value="comments">50 records</option>
+</select>
+</div>
+
+
+<!-- PAGINATION -->
+
+<nav class="govuk-pagination" aria-label="Pagination">
+  <ul class="govuk-pagination__list">
+    <li class="govuk-pagination__item govuk-pagination__item--current">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
+    </li>
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="" aria-label="Page 2">2</a>
+    </li>
+     <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="" aria-label="Page ...">...</a>
+    </li>
+      <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="" aria-label="Page 200">200</a>
+    </li>
+  </ul>
+
+  <div class="govuk-pagination__next">
+    <a class="govuk-link govuk-pagination__link" href="" rel="next">
+      <span class="govuk-pagination__link-title">
+        Next<span class="govuk-visually-hidden"> page</span>
+      </span>
+      <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<p class="moj-pagination__results" style="margin-top: -12px;">
+  Page 1 of 2
+</p>
+
+
+
+
+{% endblock %}
