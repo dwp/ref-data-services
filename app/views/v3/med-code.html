@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="RDS" %}
+
+
+{% block header %}
+
+<header class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name">
+      <a href="#" class="dwp-header__link">Reference data services</a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-6">
+ <a href="dataset-view-med" class="govuk-back-link">Back</a>
+</div>
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+    Medical conditions
+    </h1>
+
+
+ <label class="govuk-label" for="full-name">
+Code
+  </label>
+  <input class="govuk-input" id="full-name" name="fullName" type="text" spellcheck="false" autocomplete="name">
+
+<div class="govuk-button-group govuk-!-margin-top-6">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+  <a class="govuk-link" href="#">Cancel</a>
+</div>
+   
+{% endblock %}
