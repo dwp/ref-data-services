@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="RDS" %}
+
+
+{% block header %}
+
+<header class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name">
+      <a href="#" class="dwp-header__link">Reference data services</a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      Record deleted
+    </h3>
+    <p class="govuk-body">Haematological Disease has been deleted.</p>
+  </div>
+</div>
+
+<a href="dataset-view-med"
+   class="govuk-button govuk-button--primary govuk-!"
+   data-module="govuk-button">
+  Return to dataset view 
+</a>
+
+
+
+
+{% endblock %}
