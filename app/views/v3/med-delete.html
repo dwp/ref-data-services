@@ -19,20 +19,19 @@
 {% block content %}
 
 <div class="govuk-!-padding-bottom-6">
- <a href="dataset-view-med" class="govuk-back-link">Back</a>
+ <a href="summary-edit" class="govuk-back-link">Back</a>
 </div>
 
 
-
 <div class="govuk-form-group">
- 
+  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-       Do you want to delete record?  
+       Do you want to delete record?
       </h1>
     </legend>
-    
-    <div class="govuk-radios govuk-radios--inline govuk-!-margin-top-6">
+   
+   <div class="govuk-radios govuk-radios--inline govuk-!-margin-top-6">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
         <label class="govuk-label govuk-radios__label" for="changedName">
@@ -49,14 +48,13 @@
   </fieldset>
 </div>
 
-
-<a href="med-delete-success"
+<div class="govuk-button-group govuk-!-margin-top-6">
+  <a href="med-delete-success"
    class="govuk-button govuk-button--primary govuk-!"
    data-module="govuk-button">
-  Confirm
+Submit changes
 </a>
-
-
+ 
 </div>
 
 
