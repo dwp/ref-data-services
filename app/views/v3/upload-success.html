@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="RDS" %}
+
+
+{% block header %}
+
+<header class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name">
+      <a href="#" class="dwp-header__link">Reference data services</a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    Upload complete
+  </h1>
+  <div class="govuk-panel__body">
+    Your file has been successfully uploaded<br>
+  </div>
+</div>
+
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">
+  What happens next?
+</h2>
+
+<p>The file will be processed in the overnight batch job in the next business day.</p>
+
+<p>Once the processing is complete, you may be contacted if any additional information is needed or if there are updates regarding your submission.</p>
+ 
+
+
+<div class="govuk-button-group govuk-!-margin-top-6">
+  <a href="dataset-view-med"
+   class="govuk-button govuk-button--primary govuk-!"
+   data-module="govuk-button">
+ Return to dataset view 
+</a>
+ 
+ 
+</div>
+   
+
+{% endblock %}
