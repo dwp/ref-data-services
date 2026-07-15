@@ -22,40 +22,37 @@
  <a href="summary-edit" class="govuk-back-link">Back</a>
 </div>
 
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-       Do you want to delete record?
-      </h1>
-    </legend>
    
-   <div class="govuk-radios govuk-radios--inline govuk-!-margin-top-6">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="changedName">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changedName-2">
-          No
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
+   <form class="form" action="/med-delete" method="post">
 
-<div class="govuk-button-group govuk-!-margin-top-6">
-  <a href="med-delete-success"
-   class="govuk-button govuk-button--primary govuk-!"
-   data-module="govuk-button">
-Submit changes
-</a>
- 
-</div>
+{{ govukRadios({
+classes: "govuk-radios--inline",
+  name: "record",
+  value: data['record'],
+  fieldset: {
+    legend: {
+      text: "Do you want to delete record?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l govuk-!-margin-bottom-7"
+    }
+  },
+  
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
 
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+</form>
 
 {% endblock %}

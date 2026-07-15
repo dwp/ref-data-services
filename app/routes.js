@@ -82,3 +82,12 @@ router.get('/v3/start-now', function (req, res) {
   res.render('v3/start-now')
 })
 
+router.post('/med-delete', function(request, response) {
+
+	var record = request.session.data['record']
+	if (record == "yes"){
+		response.redirect("/v3/med-delete-success")
+	} else {
+		response.redirect("/v3/summary-edit")
+	}
+})
