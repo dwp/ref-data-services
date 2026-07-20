@@ -1,0 +1,148 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="RDS" %}
+
+
+{% block header %}
+
+<header class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name">
+      <a href="#" class="dwp-header__link">Reference data services</a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-6">
+ <a href="med-name" class="govuk-back-link">Back</a>
+</div>
+
+
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Medical conditions
+    </h2>
+ <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="med-delete">Delete record<span class="govuk-visually-hidden"> </span></a>
+    </ul>
+  </div>
+  
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Medical condition name
+        </dt>
+        <dd class="govuk-summary-list__value">
+        Haematological Disease
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="med-name-edit">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Code
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="med-code-edit">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Code MC
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+        </dd>
+      </div>
+<div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Category subgroup
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+        </dd>
+      </div>
+<div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Disability 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          D code
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          New code
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+        </dd>
+      </div>
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          CICD 10 code range
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+        </dd>
+      </div>
+
+      
+
+
+    </dl>
+  </div>
+</div>
+
+<div class="govuk-button-group govuk-!-margin-top-6">
+  <a href="create-success"
+   class="govuk-button govuk-button--primary govuk-!"
+   data-module="govuk-button">
+Submit changes
+</a>
+ 
+</div>
+ 
+
+{% endblock %}
