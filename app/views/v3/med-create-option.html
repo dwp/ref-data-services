@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="RDS" %}
+
+
+{% block header %}
+
+<header class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name">
+      <a href="#" class="dwp-header__link">Reference data services</a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-6">
+ <a href="dataset-view-med" class="govuk-back-link">Back</a>
+</div>
+
+   
+   <form class="form" action="/med-create-option" method="post">
+
+
+<style>
+.govuk-radios__item {
+margin-bottom: 24px;
+}
+</style>
+    
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "create",
+  fieldset: {
+    legend: {
+      text: "What would you like to do?",
+      isPageHeading: true,
+       classes: "govuk-fieldset__legend--l govuk-!-margin-bottom-8"
+    }
+  },
+  items: [
+    {
+      value: "basic-record",
+      text: "Create a basic record",
+      hint: {
+        text: "Create a record using the mandatory fields only"
+      }
+    },
+    {
+      value: "complete-record",
+      text: "Create a complete record",
+      hint: {
+        text: "Create a record using both mandatory and optional fields"
+      }
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+{% endblock %}

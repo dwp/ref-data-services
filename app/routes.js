@@ -91,3 +91,17 @@ router.post('/med-delete', function(request, response) {
 		response.redirect("/v3/summary-edit")
 	}
 })
+
+router.post('/med-create-option', function (req, res) {
+
+var create = req.session.data['create']
+
+if (create === 'basic-record') {
+res.redirect('/v3/med-name')
+} else if (create === 'complete-record') {
+res.redirect('/v3/summary-edit')
+} else {
+res.redirect('/med-create-option')
+}
+
+})
