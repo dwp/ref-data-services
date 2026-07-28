@@ -10,23 +10,23 @@
 
 <div style="position: relative;">
 
-  {{ dwpHeader({
-      serviceName: "Reference data services",
-      serviceHref: '#',
-      container: true,
-      action: "John Doe - Sign out",
-      actionHref: "#",
-      navigation: {
-        items: [
-          { href: "dataset-view-med", text: "Value" },
-          { href: "#", text: "Summary" },
-          { href: "#", text: "Audit history" },
-          { href: "#", text: "Data dictionary" },
-          { href: "#", text: "Data quality" },
-          { href: "#", text: "Data catalogue" }
-        ]
-      }
-  }) }}
+    {{ dwpHeader({
+        serviceName: "Reference data services",
+        serviceHref: '#',
+        container: true,
+  action: "John Doe - Sign out",
+  actionHref: "#",
+        navigation: {
+          items: [
+  { href: "dataset-view-med", text: "Value" },
+            { href: "#", text: "Summary" },
+            { href: "#", text: "Audit history" },
+            { href: "#", text: "Data dictionary" },
+            { href: "#", text: "Data quality" },
+            { href: "#", text: "Data catalogue" }
+          ]
+        }
+    }) }}
 
 </div>
 
@@ -45,217 +45,327 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-</div>
-
-<h1 class="govuk-heading-l" style="margin-top: -8px;">Medicial conditions audit history</h1>
-
-
-<!-- SCROLLABLE TABLE (MOJ pattern) -->
- <div class="moj-scrollable-pane"
-role="region"
-aria-label="Office locations table"
-tabindex="0"
-style="overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; box-sizing: border-box;">
-
-  <!-- ADD minimum Table width HERE -->
-<table class="govuk-table govuk-tableable-table"      
- style="min-width: 1200px;">
-
-<th class="govuk-table__header">
-<span class="table-sort">
-Medical condition name
-<span class="table-sort-arrows" aria-hidden="true">
-<span>▲</span>
-<span>▼</span>
-</span>
-</span>
-</th>
-    
-<th class="govuk-table__header">
-<span class="table-sort">
-Code
-<span class="table-sort-arrows" aria-hidden="true">
-<span>▲</span>
-<span>▼</span>
-</span>
-</span>
-</th>
-
-<th class="govuk-table__header">
-<span class="table-sort">
-Code MC
-<span class="table-sort-arrows" aria-hidden="true">
-<span>▲</span>
-<span>▼</span>
-</span>
-</span>
-</th>
-
-
-<th class="govuk-table__header">
-<span class="table-sort">
-Category subgroup
-<span class="table-sort-arrows" aria-hidden="true">
-<span>▲</span>
-<span>▼</span>
-</span>
-</span>
-</th>
-
-   <th class="govuk-table__header">
-<span class="table-sort">
-Disability
-<span class="table-sort-arrows" aria-hidden="true">
-<span>▲</span>
-<span>▼</span>
-</span>
-</span>
-</th>
-   
-   <th class="govuk-table__header">
-<span class="table-sort">
-D code
-<span class="table-sort-arrows" aria-hidden="true">
-<span>▲</span>
-<span>▼</span>
-</span>
-</span>
-</th>
-   
-       <th class="govuk-table__header">
-<span class="table-sort">
-New code
-<span class="table-sort-arrows" aria-hidden="true">
-<span>▲</span>
-<span>▼</span>
-</span>
-</span>
-</th>
-
-
-       <th class="govuk-table__header">
-<span class="table-sort">
-ICD 10 code range
-<span class="table-sort-arrows" aria-hidden="true">
-<span>▲</span>
-<span>▼</span>
-</span>
-</span>
-</th>
-
-
-  </tr>
-</thead>
-  <td class="govuk-table__cell">  <a href="summary-edit" class="govuk-link"> Haematological disease</a></td>
-  <td class="govuk-table__cell">1</td>
-  <td class="govuk-table__cell">A</td>
-  <td class="govuk-table__cell">Anaemia A01, A10</td>
-  <td class="govuk-table__cell">Iron deficiency</td>
-  <td class="govuk-table__cell">D65</td>
-  <td class="govuk-table__cell">A01</td>
-  <td class="govuk-table__cell">D50</td>
-
-</tr>
-
-        <td class="govuk-table__cell"><a href="your-link-here" class="govuk-link"> Metabolic disease</td>
-        <td class="govuk-table__cell">10</td>
-        <td class="govuk-table__cell">A</td>
-        <td class="govuk-table__cell">Porphyria</td>
-        <td class="govuk-table__cell">Porphyria</td>
-        <td class="govuk-table__cell">D33</td>
-        <td class="govuk-table__cell">E12</td>
-        <td class="govuk-table__cell">E80</td>
-      </tr>
-    
-      <td class="govuk-table__cell"><a href="your-link-here" class="govuk-link"> Metabolic disease</td>
-        <td class="govuk-table__cell">101</td>
-        <td class="govuk-table__cell">E</td>
-        <td class="govuk-table__cell">Eating disorder</td>
-        <td class="govuk-table__cell">Obestiy</td>
-        <td class="govuk-table__cell">D33</td>
-        <td class="govuk-table__cell">E14</td>
-        <td class="govuk-table__cell">E66</td>
-      </tr>
-         
-   <td class="govuk-table__cell">  <a href="your-link-here" class="govuk-link"> Haematological disease</a></td>
-  <td class="govuk-table__cell">102</td>
-  <td class="govuk-table__cell">A</td>
-  <td class="govuk-table__cell">Anaemia A01, A10</td>
-  <td class="govuk-table__cell">Iron deficiency</td>
-  <td class="govuk-table__cell">D65</td>
-  <td class="govuk-table__cell">A01</td>
-  <td class="govuk-table__cell">D50</td>
-
-</tr>
-
-      <td class="govuk-table__cell"><a href="your-link-here" class="govuk-link"> Metabolic disease</td>
-        <td class="govuk-table__cell">103</td>
-        <td class="govuk-table__cell">E</td>
-        <td class="govuk-table__cell">Porphyria</td>
-        <td class="govuk-table__cell">Porphyria</td>
-        <td class="govuk-table__cell">D33</td>
-        <td class="govuk-table__cell">E12</td>
-        <td class="govuk-table__cell">E80</td>
-      </tr>
-
-    </tbody>
-
-  </table>
-
-
-</div>
-
-<!-- Add spacing below scrollbar -->
- <div style="margin-top: 32px;"></div>
-
-<!--- Dropdown menu-->
-
-<div class="govuk-form-group">
-<label class="govuk-label" for="sort">Select records per page</label>
-<select class="govuk-select" id="sort" name="sort">
-<option value="updated" selected>5 records</option>
-<option value="views">10 records</option>
-<option value="views">25 records</option>
-<option value="comments">50 records</option>
-</select>
-</div>
-
-
-<!-- PAGINATION -->
-
-<nav class="govuk-pagination" aria-label="Pagination">
-  <ul class="govuk-pagination__list">
-    <li class="govuk-pagination__item govuk-pagination__item--current">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="" aria-label="Page 2">2</a>
-    </li>
-     <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="" aria-label="Page ...">...</a>
-    </li>
-      <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="" aria-label="Page 200">200</a>
-    </li>
-  </ul>
-
-  <div class="govuk-pagination__next">
-    <a class="govuk-link govuk-pagination__link" href="" rel="next">
-      <span class="govuk-pagination__link-title">
-        Next<span class="govuk-visually-hidden"> page</span>
-      </span>
-      <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-      </svg>
-    </a>
   </div>
-</nav>
 
-<p class="moj-pagination__results" style="margin-top: -12px;">
-  Page 1 of 2
-</p>
+  <h1 class="govuk-heading-l" style="margin-top: 32px; margin-bottom: 56px;">
+    Medical conditions audit history
+  </h1>
+
+  <!-- SCROLLABLE TABLE (MOJ pattern) -->
+  <div class="moj-scrollable-pane" role="region" aria-label="Office locations table" tabindex="0"
+    style="overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; box-sizing: border-box;">
+    <table class="govuk-table" style="min-width: 1200px;">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header"><span class="table-sort">
+              Value
+              <span class="table-sort-arrows" aria-hidden="true"><span>▲</span><span>▼</span></span></span></th>
+          <th class="govuk-table__header"><span class="table-sort">
+              Operation
+              <span class="table-sort-arrows" aria-hidden="true"><span>▲</span><span>▼</span></span></span></th>
+          <th class="govuk-table__header"><span class="table-sort">
+              Field
+              <span class="table-sort-arrows" aria-hidden="true"><span>▲</span><span>▼</span></span></span></th>
+          <th class="govuk-table__header"><span class="table-sort">
+              Changed from
+              <span class="table-sort-arrows" aria-hidden="true"><span>▲</span><span>▼</span></span></span></th>
+          <th class="govuk-table__header"><span class="table-sort">
+              Changed to
+              <span class="table-sort-arrows" aria-hidden="true"><span>▲</span><span>▼</span></span></span></th>
+          <th class="govuk-table__header"><span class="table-sort">
+              Modified by
+              <span class="table-sort-arrows" aria-hidden="true"><span>▲</span><span>▼</span></span></span></th>
+          <th class="govuk-table__header"><span class="table-sort">
+              Modified on (UTC)
+              <span class="table-sort-arrows" aria-hidden="true"><span>▲</span><span>▼</span></span></span></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Code</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">92</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Code MC</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">C</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Dcode 1</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">D80</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Name</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Newcode 1</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">C35</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Code</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">92</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Code MC</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">C</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Dcode 1</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">D80</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Name</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Newcode 1</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">C35</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Code MC</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">C</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Dcode 1</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">D80</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Name</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Newcode 1</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">C35</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Code</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">92</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Code MC</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">C</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Dcode 1</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">D80</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Name</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Newcode 1</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">C35</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Newcode 1</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">C35</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Code MC</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">C</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Dcode 1</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">D80</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Name</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Newcode 1</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">C35</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Malignant disease</td>
+          <td class="govuk-table__cell">Create</td>
+          <td class="govuk-table__cell">Code</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">92</td>
+          <td class="govuk-table__cell">john.doe1@dig...</td>
+          <td class="govuk-table__cell">12/04/2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <!-- Add spacing below scrollbar -->
+  <div style="margin-top: 32px;"></div>
+
+  <!--- Dropdown menu-->
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">Select records per page</label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="updated" selected>25 records</option>
+      <option value="views">50 records</option>
+      <option value="views">75 records</option>
+      <option value="comments">100 records</option>
+    </select>
+  </div>
+
+
+  <!-- PAGINATION -->
+
+  <nav class="govuk-pagination" aria-label="Pagination">
+    <ul class="govuk-pagination__list">
+      <li class="govuk-pagination__item govuk-pagination__item--current">
+        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
+      </li>
+      <li class="govuk-pagination__item">
+        <a class="govuk-link govuk-pagination__link" href="" aria-label="Page 2">2</a>
+      </li>
+      <li class="govuk-pagination__item">
+        <a class="govuk-link govuk-pagination__link" href="" aria-label="Page ...">...</a>
+      </li>
+      <li class="govuk-pagination__item">
+        <a class="govuk-link govuk-pagination__link" href="" aria-label="Page 200">200</a>
+      </li>
+    </ul>
+
+    <div class="govuk-pagination__next">
+      <a class="govuk-link govuk-pagination__link" href="" rel="next">
+        <span class="govuk-pagination__link-title">
+          Next<span class="govuk-visually-hidden"> page</span>
+        </span>
+        <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13"
+          width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+          <path
+            d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <p class="moj-pagination__results" style="margin-top: -12px;">
+    Page 1 of 2
+  </p>
 
 
 
 
-{% endblock %}
+  {% endblock %}
