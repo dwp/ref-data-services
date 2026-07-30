@@ -18,12 +18,17 @@
 
 {% block content %}
 
-<div class="govuk-panel govuk-panel--confirmation">
-  <h1 class="govuk-panel__title">
-    Upload complete
-  </h1>
-  <div class="govuk-panel__body">
-    Your file has been successfully uploaded<br>
+<div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      Upload completed
+    </h3>
+    <p class="govuk-body">Your file has been successfully uploaded.</p>
   </div>
 </div>
 
