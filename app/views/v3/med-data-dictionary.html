@@ -1,0 +1,136 @@
+{% extends "layouts/main.html" %}
+
+
+{# 1 Import the macro #}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
+
+{# 2 Override the header block to render the internal service header #}
+
+{% block header %}
+
+<div style="position: relative;">
+
+    {{ dwpHeader({
+        serviceName: "Reference data services",
+        serviceHref: '#',
+        container: true,
+  action: "John Doe - Sign out",
+  actionHref: "#",
+        navigation: {
+          items: [
+  { href: "dataset-view-med", text: "Value" },
+            { href: "#", text: "Summary" },
+            { href: "#", text: "Audit history" },
+            { href: "#", text: "Data dictionary" },
+            { href: "#", text: "Data quality" },
+            { href: "#", text: "Data catalogue" }
+          ]
+        }
+    }) }}
+
+</div>
+
+{% endblock %}
+
+
+{# 3 Optional: before-content area (breadcrumbs, phase banner, etc.) #}
+{% block beforeContent %}
+  {# e.g. {{ govukBackLink({ href: "all-dataset", text: "Back" }) }} #}
+{% endblock %}
+
+{# 4 Your existing page content unchanged #}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  </div>
+
+  <h1 class="govuk-heading-l" style="margin-top: 32px; margin-bottom: 56px;">
+    Medical conditions data dictionary
+  </h1>
+
+  <!-- SCROLLABLE TABLE (MOJ pattern) -->
+  <div class="moj-scrollable-pane" role="region" aria-label="Office locations table" tabindex="0"
+    style="overflow-x: auto; overflow-y: hidden; width: 100%; max-width: 100%; box-sizing: border-box;">
+    <table class="govuk-table" style="min-width: 1200px;">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header">
+            Name
+              </th>
+          <th class="govuk-table__header">
+              Description
+             </th>
+          <th class="govuk-table__header">
+              Format 
+              </th>
+          <th class="govuk-table__header">
+              Mandatory (Yes/No)
+              </th>
+          
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Medical condition name</td>
+          <td class="govuk-table__cell">Name of the medical condition recorded in the system</td>
+          <td class="govuk-table__cell">Text</td>
+          <td class="govuk-table__cell">Yes</td>
+          
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Code MC</td>
+          <td class="govuk-table__cell">Medical condition classification code</td>
+          <td class="govuk-table__cell">Single-character code</td>
+          <td class="govuk-table__cell">No</td>
+         
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Category subgroup</td>
+          <td class="govuk-table__cell">Sub-classification of the medical condition</td>
+          <td class="govuk-table__cell">Text with associated codes</td>
+          <td class="govuk-table__cell">No</td>
+         
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Disability</td>
+          <td class="govuk-table__cell">Related disability or condition classification</td>
+          <td class="govuk-table__cell">Text</td>
+          <td class="govuk-table__cell">No</td>
+         
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">D code</td>
+          <td class="govuk-table__cell">Disease classification code</td>
+          <td class="govuk-table__cell">Alphanumeric code</td>
+          <td class="govuk-table__cell">No</td>
+  
+        </tr>
+        
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">New code</td>
+          <td class="govuk-table__cell">Updated or replacement classification code.</td>
+          <td class="govuk-table__cell">Alphanumeric code</td>
+          <td class="govuk-table__cell">No</td> 
+        </tr>
+
+           <tr class="govuk-table__row">
+          <td class="govuk-table__cell">ICD-10 code range</td>
+          <td class="govuk-table__cell">ICD-10 classification code or range associated with the condition</td>
+          <td class="govuk-table__cell">Alphanumeric code</td>
+          <td class="govuk-table__cell">No</td> 
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+
+
+  {% endblock %}
