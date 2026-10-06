@@ -11,7 +11,7 @@
     "body-parser": "2.2.2",
     "express": "5.2.1",
     "govuk-frontend": "5.14.0",
-    "govuk-prototype-kit": "^13.20.5",
+    "govuk-prototype-kit": "13.20.5",
     "qs": "6.16.0"
   },
   "overrides": {
@@ -27,9 +27,9 @@
     "govuk-prototype-kit": {
       "proxy-addr": "2.0.8"
     },
-    "engine.io": "^6.6.10",
-    "brace-expansion": "^1.1.12",
+    "engine.io": "6.6.11",
+    "brace-expansion": "1.1.21",
     "braces": "^3.0.4",
-    "source-map-js": "^1.2.1"
+    "source-map-js": "1.2.2"
   }
 }
